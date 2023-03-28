@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CustomAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,14 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::namespace('App\Http\Controllers')->group(function () {
-//     Auth::routes();
-// });
 
-//Route::get('/login', 'LoginController@showLoginForm')->name('login');
-//Route::get('/login', ' App\Http\Controllers\LoginController@showLoginForm');
-Route::get('/login', [LoginController::class, 'showLoginForm'])->name('showLoginForm');
-Route::post('/login',  [LoginController::class,'login'])->name('login');
-// Route::post('/logout', 'LoginController@logout')->name('logout');
-
-// Route::get('/post', 'PostController@index');
+Route::get('dashboard', [CustomAuthController::class, 'dashboard']); 
+Route::get('login', [CustomAuthController::class, 'index'])->name('login');
+Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
+Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
+Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
+Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
