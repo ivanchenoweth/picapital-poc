@@ -17,5 +17,5 @@ jobs:
         server: picapital.mx
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /public_html/picapital.mx
+        server-dir: /picapital.mx
         
