@@ -11,15 +11,15 @@
 
  
         <footer>
-   <div class="container">
-      <div class="row">
-         <div class="col-md-6">
-            <h3>Contacto</h3>
-            <p>Correo electrónico: contacto@picapital.mx</p>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <h3>Contacto</h3>
+                  <p>Correo electrónico: contacto@picapital.mx</p>
+               </div>
+            </div>
          </div>
-      </div>
-   </div>
-</footer>
+      </footer>
 
     </body>
 </html>
