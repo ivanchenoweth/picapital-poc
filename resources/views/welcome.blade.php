@@ -72,7 +72,7 @@
 
     <body class="antialiased">
     <form method="POST" action="{{ route('login.custom') }}">
-                            @csrf
+         @csrf
         <div class="imgcontainer">
             <img src="logo-picapital.png" alt="Avatar" class="avatar">
         </div>
