@@ -72,16 +72,16 @@
 
     <body class="antialiased">
     <form method="POST" action="{{ route('login.custom') }}">
+                            @csrf
         <div class="imgcontainer">
-            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            <img src="logo-picapital.png" alt="Avatar" class="avatar">
         </div>
 
         <div class="container">
 
             <label for="uname"><b>Username</b></label>
 
-            <input type="text" placeholder="Email" id="email" class="form-control" name="email" required
-                                    autofocus>
+            <input type="text" placeholder="Email" id="email" class="form-control" name="email" required autofocus>
 
             <label for="psw"><b>Password</b></label>
 
