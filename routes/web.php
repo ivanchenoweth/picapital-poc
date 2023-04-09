@@ -14,10 +14,16 @@ use App\Http\Controllers\CustomAuthController;
 |
 */
 ini_set('memory_limit', -1);
+$url = config('app.url');
+URL::forceRootUrl($url);
+
+if (App::environment('production')) {  
+    URL::forceScheme('https');  
+}  
+
 Route::get('/', function () {
     return view('welcome');
 });
-
 
 Route::get('dashboard', [CustomAuthController::class, 'dashboard']); 
 Route::get('login', [CustomAuthController::class, 'index'])->name('login');
