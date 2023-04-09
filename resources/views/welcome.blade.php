@@ -10,7 +10,7 @@
     
     <body class="antialiased">
     <div class="center">
-      <h1>Login</h1>
+      <h1>Login 1250</h1>
     <form method="POST" action="{{ route('login.custom') }}">
          @csrf
         <div class="imgcontainer">
